@@ -1,0 +1,16 @@
+{
+  "name": "twitter-streaming-node",
+  "version": "0.0.1",
+  "author": "DS",
+  "private": true,
+  "scripts": {
+    "start": "node app"
+  },
+  "dependencies": {
+    "express": "*",
+    "jsonfile": "^2.2.3",
+    "mongoose": "^4.1.12",
+    "socket.io": "*",
+    "twitter": "*"
+  }
+}
