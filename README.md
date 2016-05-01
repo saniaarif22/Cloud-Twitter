@@ -6,12 +6,12 @@ Implemented the project in Node.js, using the Twitter API to stream tweets, Alch
 
 - To run:
 
-npm install
+  - run npm install
 
-Put in Twitter API keys in stream.js
-node stream.js
+  - Put in Twitter API keys in stream.js
 
-Open a new terminal window:
-node server.js
+  - run node stream.js
 
-Open browser and go to localhost:5000
+  - Open a new terminal window and run node server.js
+
+  - Open browser and go to localhost:5000
