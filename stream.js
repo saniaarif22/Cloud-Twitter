@@ -16,10 +16,10 @@ var db = monk('localhost:27017/twit');
 
 //Setup twitter stream api
 var twit = new twitter({
-  consumer_key: '',
-  consumer_secret: '',
-  access_token_key: '',
-  access_token_secret: ''
+  consumer_key: 'EWDOp8GNhqGcoUNP683ZDu50T',
+  consumer_secret: 'wvcXGkViWqbdUGiW0vGAEBpwNHZQrTdeZSk07u8stsWTYuGgzY',
+  access_token_key: '40184253-V6ScLZ7d0ssG8pqga5B1nTS5dvlLsP7o0Xmtmgtad',
+  access_token_secret: 'xzQQIUxjyhNWqlgaJGEVScgjtR8BkVGDRbLRcag7cIWIi'
 }),
 stream = null;
 
