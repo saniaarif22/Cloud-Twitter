@@ -57,7 +57,8 @@ io.on('connection', function (socket) {
         //json object
         var outputPoint = {
             "lat": doc.latitude,
-            "lng": doc.longitude
+            "lng": doc.longitude,
+            "tweet":doc.tweet
         };
 
         socket.broadcast.emit("twitter-stream", outputPoint);
