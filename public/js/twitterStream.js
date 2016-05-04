@@ -1,3 +1,6 @@
+  var markers = [];
+  var heatmap;
+  var map;
 function initialize() {
   //Setup Google Map
   var myLatlng = new google.maps.LatLng(17.7850,-12.4183);
@@ -45,20 +48,23 @@ function initialize() {
       
       console.log(data);
       //Add tweet to the heat map array.
-      var tweetLocation = new google.maps.LatLng(data.lng,data.lat);
+      var tweetLocation = new google.maps.LatLng(data.lng,data.lat, data.tweet);
       liveTweets.push(tweetLocation);
 
       //Flash a dot onto the map quickly
-      var image = "css/small-dot-icon.png";
       var marker = new google.maps.Marker({
         position: tweetLocation,
         map: map,
+        animation : google.maps.Animation.DROP
         //icon: image
+      })
+      markers.push(marker);
+      var infowindow = new google.maps.InfoWindow({
+      content: data.tweet
       });
-
-      setTimeout(function(){
-        marker.setMap(null);
-      },6000);
+      google.maps.event.addListener(marker, 'click', (function () {
+        infowindow.open(map, marker);
+      }));
 
     });
 
